@@ -260,10 +260,6 @@ void RectifyProcessor::stereoRectify1(
 
   // Create some Matx mirror-storage to play with...
   cv::Matx<double, 3, 3> R1, R2;
-  const cv::Matx<double, 3, 3> R(
-      matR.at<double>(0, 0), matR.at<double>(0, 1), matR.at<double>(0, 2),
-      matR.at<double>(1, 0), matR.at<double>(1, 1), matR.at<double>(1, 2),
-      matR.at<double>(2, 0), matR.at<double>(2, 1), matR.at<double>(2, 2) );
   const cv::Vec<double, 3> T(matT.at<double>(0, 0), matT.at<double>(1, 0), matT.at<double>(2, 0) );
   
   cv::Vec<double, 3> om;

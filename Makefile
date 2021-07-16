@@ -31,7 +31,8 @@ MKFILE_DIR := $(patsubst %/,%,$(dir $(MKFILE_PATH)))
 SUDO ?= sudo
 CMAKE_BUILD_EXTRA_OPTIONS ?=
 
-.DEFAULT_GOAL := all
+#.DEFAULT_GOAL := all
+.DEFAULT_GOAL := all_without_ros
 
 help:
 	@echo "Usage:"
@@ -49,6 +50,7 @@ help:
 .PHONY: help
 
 all: init samples ros
+all_without_ros: init samples
 
 .PHONY: all
 
